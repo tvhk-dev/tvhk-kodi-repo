@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.video.mpweekly" name="MPWeekly Addon for TVHK in Kodi" provider-name="MPWeekly / TVHK" version="0.0.1">
+<addons><addon id="plugin.video.mpweekly" name="MPWeekly Addon for TVHK in Kodi" provider-name="MPWeekly / TVHK" version="0.0.1-rev">
     <requires>
         <import addon="xbmc.python" version="2.25.0" />
         <import addon="script.module.routing" version="0.2.0" />
