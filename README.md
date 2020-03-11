@@ -7,7 +7,7 @@ The following addons are available here:
 [__master__](master/addons.xml) (Kodi ver. 17.0.0):
 
 - [__MPWeekly Addon for TVHK in Kodi__](master/datadir/plugin.video.mpweekly/plugin.video.mpweekly-0.0.1-rev.zip) plugin.video.mpweekly v0.0.1-rev
-- [__PeerTube__](master/datadir/plugin.video.peertube/plugin.video.peertube-0.3.1.zip) plugin.video.peertube v0.3.1
+- [__PeerTube__](master/datadir/plugin.video.peertube/plugin.video.peertube-0.3.2.zip) plugin.video.peertube v0.3.2
 - [__The Stand News Addon for TVHK in Kodi__](master/datadir/plugin.video.thestandnews/plugin.video.thestandnews-0.0.1.zip) plugin.video.thestandnews v0.0.1
 - [__TVHK Live HK TV Addon__](master/datadir/plugin.video.tvhk/plugin.video.tvhk-0.9.4.zip) plugin.video.tvhk v0.9.4
 - [__TVHK Select Addon for TVHK in Kodi__](master/datadir/plugin.video.tvhkselect/plugin.video.tvhkselect-0.0.1.zip) plugin.video.tvhkselect v0.0.1
@@ -16,4 +16,4 @@ The following addons are available here:
 - [__OpenSubtitles.org__](master/datadir/service.subtitles.opensubtitles/service.subtitles.opensubtitles-5.0.16.zip) service.subtitles.opensubtitles v5.0.16
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``7d2ed15``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/7d2ed159a26d52bb91d13acce5c994e7871c8c1f)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``af2739e``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/af2739e04ffb30dc3ae6bce0d84831444b0b911b)
