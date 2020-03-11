@@ -38,6 +38,7 @@
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.addon.signals" version="0.0.3" />
+    <import addon="script.module.libtorrent" /> 
   </requires>
   <extension library="peertube.py" point="xbmc.python.pluginsource">
     <provides>video</provides>
