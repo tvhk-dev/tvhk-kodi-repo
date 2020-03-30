@@ -15,4 +15,4 @@ The following addons are available here:
 - [__OpenSubtitles.org__](master/datadir/service.subtitles.opensubtitles/service.subtitles.opensubtitles-5.0.16.zip) service.subtitles.opensubtitles v5.0.16
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``23edc9f``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/23edc9f1db5778bcbe35b37b0764bb82454c9d4c)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``1d269bb``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/1d269bbb2488f0078ab6c281f3b37fa4755b91bd)
