@@ -2,12 +2,12 @@
 
 # Adapted from https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
 
-set -e
+#set -e
 
-if [ "$TRAVIS_PULL_REQUEST" != 'false' ]; then
-    # don't run for PRs
-    exit 0
-fi
+#if [ "$TRAVIS_PULL_REQUEST" != 'false' ]; then
+#    # don't run for PRs
+#    exit 0
+#fi
 
 CWD=$(pwd)
 SOURCE_BRANCH="master"
@@ -77,6 +77,14 @@ done
 # Generate readme.md
 python .github/build_readme.py "$REPO_USER" "$REPO_NAME" ".github/config.json" "$SHA" -t ".github/templates/repo.readme.md.tmpl" -o "$BUILD_DIR/README.md" -d "$DATADIR" -b "$BUILD_DIR"
 
+# Check if this is the master branch
+# Only deploy the Github page if the branch is master
+if [ "$TRAVIS_BRANCH" != "master" ]; then
+	echo "On the $TRAVIS_BRANCH branch now. Not master. Do not deploy"
+	exit 0
+fi
+
+# Beginning deploy to Github page
 cd $BUILD_DIR
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
