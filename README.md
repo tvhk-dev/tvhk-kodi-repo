@@ -1,11 +1,11 @@
 # TVHK Project Kodi Addon Repository
 
-[![Travis][travis-shield]][travis-link]
-
-![Logo][tvhk-logo]
-
 A Kodi Addon Repository specically made for TVHK, based on the [Almost "Instant"
 Kodi Addon Repository][instant-kodi-repo].
+
+![TVHK Logo][tvhk-logo] ![Kodi Logo][kodi-logo]
+
+[![Travis][travis-shield]][travis-link]
 
 This repository is responsible for building and maintaining the [TVHK project's
 Kodi Addon repository website][tvhk-repo-website]. Please reference the
@@ -16,4 +16,5 @@ this repository.
 [travis-shield]: https://img.shields.io/travis/tvhk-dev/tvhk-kodi-repo.svg?style=flat-square
 [travis-link]: https://travis-ci.org/tvhk-dev/tvhk-kodi-repo/
 [tvhk-repo-website]: https://tvhk-dev.github.io/tvhk-kodi-repo/
-[tvhk-logo]: tvhk_branding_materials/tvhk_logo_128px.png
+[tvhk-logo]: .github/assets/tvhk-logo-128px.png
+[kodi-logo]: .github/assets/kodi-logo-128px.png
