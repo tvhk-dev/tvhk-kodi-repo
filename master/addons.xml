@@ -34,7 +34,7 @@
             <screenshot>resources/assets/screenshot-3.png</screenshot>
         </assets>
     </extension>
-</addon><addon id="plugin.video.peertube" name="PeerTube" provider-name="Cyrille Bollu" version="0.3.1-armv8">
+</addon><addon id="plugin.video.peertube" name="PeerTube" provider-name="Cyrille Bollu" version="0.3.1-r">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.addon.signals" version="0.0.3" />
