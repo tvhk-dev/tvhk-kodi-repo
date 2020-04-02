@@ -2,12 +2,7 @@
 
 # Adapted from https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
 
-set -e
-
-if [ "$TRAVIS_PULL_REQUEST" != 'false' ]; then
-    # don't run for PRs
-    exit 0
-fi
+#set -e
 
 CWD=$(pwd)
 SOURCE_BRANCH="master"
@@ -54,7 +49,7 @@ for b in $(cat .github/config.json | .github/jq -c .branchmap[]); do
     minversion=$(echo "$b" | .github/jq -r '.minversion')
     mkdir -p "$SOURCES_DIR/$name" "$SOURCES_DIR/$datadir"
 
-    git clone --quiet --depth 1 "$REPO" -b "$name" "$SOURCES_DIR/$name"
+    git clone --quiet --recursive --depth 1 "$REPO" -b "$name" "$SOURCES_DIR/$name"
 
     python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "$SOURCES_DIR/$name/src/" -t '.github/templates/repo.addon.xml.tmpl' -c '.github/config.json' -d "$DATADIR" --icon '.github/templates/icon.png' --fanart '.github/templates/fanart.jpg'
 
@@ -77,6 +72,43 @@ done
 # Generate readme.md
 python .github/build_readme.py "$REPO_USER" "$REPO_NAME" ".github/config.json" "$SHA" -t ".github/templates/repo.readme.md.tmpl" -o "$BUILD_DIR/README.md" -d "$DATADIR" -b "$BUILD_DIR"
 
+# Check if this is a Pull Request.
+# If it is a PR, skip deploy.
+if [ "$TRAVIS_PULL_REQUEST" != 'false' ]; then
+    echo "Will not deploy on Pull Request. Exit."
+    exit 0
+fi
+
+# Check if this is the master branch
+# Only deploy the Github page if the branch is master
+if [ "$TRAVIS_BRANCH" != "master" ]; then
+    echo "On the $TRAVIS_BRANCH branch now. Expecting master. Exit."
+    exit 0
+fi
+
+# Check if encryption label is in-place
+if [ -z "$ENCRYPTION_LABEL" ]; then
+    echo "Error: ENCRYPTION_LABEL is not set. Cannot Deploy."
+    exit 1
+fi
+
+# Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
+ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
+ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
+ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
+ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
+
+# Check if encryption key is in place
+if [ -z "$ENCRYPTED_KEY" ]; then
+    echo "Error: Encryption key is not set. Cannot Deploy."
+    exit 1
+fi
+if [ -z "$ENCRYPTED_IV" ]; then
+    echo "Error: Encrypted IV is not set. Cannot Deploy."
+    exit 1
+fi
+
+# Beginning deploy to Github page
 cd $BUILD_DIR
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
@@ -88,12 +120,6 @@ fi
 
 git add -A .
 git commit -m "Deploy to GitHub Pages: ${SHA} (Travis Build: $TRAVIS_BUILD_NUMBER)"
-
-# Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
-ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
-ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
-ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
-ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
 
 eval `ssh-agent -s`
 # Use stdin/stdout instead of key writing to disk
