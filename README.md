@@ -2,6 +2,8 @@
 
 [![Travis][travis-shield]][travis-link]
 
+![Logo][tvhk-logo]
+
 A Kodi Addon Repository specically made for TVHK, based on the [Almost "Instant"
 Kodi Addon Repository][instant-kodi-repo].
 
@@ -14,3 +16,4 @@ this repository.
 [travis-shield]: https://img.shields.io/travis/tvhk-dev/tvhk-kodi-repo.svg?style=flat-square
 [travis-link]: https://travis-ci.org/tvhk-dev/tvhk-kodi-repo/
 [tvhk-repo-website]: https://tvhk-dev.github.io/tvhk-kodi-repo/
+[tvhk-logo]: tvhk_branding_materials/tvhk_logo_128px.png
