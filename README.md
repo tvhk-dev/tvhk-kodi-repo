@@ -14,6 +14,7 @@ The following addons are available here:
 - [__tvmost Addon for TVHK in Kodi__](master/datadir/plugin.video.tvmost/plugin.video.tvmost-0.0.3.zip) plugin.video.tvmost v0.0.3
 - [__tvhk-dev/tvhk-kodi-repo Repository__](master/datadir/repository.tvhk-dev.tvhk-kodi-repo/repository.tvhk-dev.tvhk-kodi-repo-1.0.1-rev.zip) repository.tvhk-dev.tvhk-kodi-repo v1.0.1-rev
 - [__OpenSubtitles.org__](master/datadir/service.subtitles.opensubtitles/service.subtitles.opensubtitles-5.0.16.zip) service.subtitles.opensubtitles v5.0.16
+- [__Aura-tvhk__](master/datadir/skin.aura-tvhk/skin.aura-tvhk-1.0.5-mod.zip) skin.aura-tvhk v1.0.5-mod
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``f84921a``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/f84921a7ccf7b8f2a650b842a836df2587f23071)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``5fd2ab5``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/5fd2ab557b1d830a43436200b378c5afd9956fe0)
