@@ -17,4 +17,4 @@ The following addons are available here:
 - [__Aura-tvhk__](master/datadir/skin.aura-tvhk/skin.aura-tvhk-1.0.5-mod.zip) skin.aura-tvhk v1.0.5-mod
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``5fd2ab5``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/5fd2ab557b1d830a43436200b378c5afd9956fe0)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``f346c11``](https://github.com/tvhk-dev/tvhk-kodi-repo/commit/f346c1184c1e2bccfa321efda82be09ab70e8664)
