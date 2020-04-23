@@ -4,3 +4,6 @@
 [submodule "src/skin.aura-tvhk"]
 	path = src/skin.aura-tvhk
 	url = https://github.com/tvhk-dev/skin.aura-tvhk
+[submodule "src/plugin.video.tvhkAPI"]
+	path = src/plugin.video.tvhkAPI
+	url = https://github.com/tvhk-dev/plugin.video.tvhkAPI/
